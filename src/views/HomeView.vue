@@ -3,7 +3,7 @@ import FolderModal from '@/widgets/FolderModal/FolderModal.vue'
 import { ref } from 'vue'
 
 const isFolderModalVisible = ref(false)
-const handleFolderSelect = (folderId) => {
+const handleFolderSelect = (folderId: number) => {
   console.log('Выбранная папка:', folderId);
 };
 </script>
