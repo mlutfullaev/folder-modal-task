@@ -1,9 +1,17 @@
 <script setup lang="ts">
+import FolderModal from '@/widgets/FolderModal/FolderModal.vue'
+import { ref } from 'vue'
+
+const isFolderModalVisible = ref(false)
+const handleFolderSelect = (folderId) => {
+  console.log('Выбранная папка:', folderId);
+};
 </script>
 
 <template>
   <main>
-    <button>Open modal</button>
+    <button @click="isFolderModalVisible = true">Open modal</button>
+    <FolderModal :visible="isFolderModalVisible" @close="isFolderModalVisible = false" @select="handleFolderSelect" />
   </main>
 </template>
 
@@ -19,6 +27,7 @@ main {
     border: none;
     background: #0267c6;
     color: #fff;
+    cursor: pointer;
   }
 }
 </style>

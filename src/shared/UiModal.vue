@@ -34,8 +34,10 @@ defineEmits<{
   align-items: center;
   background-color: rgba(0, 0, 0, 0.4);
   visibility: hidden;
+  user-select: none;
 
   &.visible {
+    user-select: auto;
     visibility: visible;
   }
   &-content {
